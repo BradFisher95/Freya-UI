@@ -12,18 +12,20 @@ export default [
     input: "src/index.ts",
     output: [
       {
-        file: packageJson.main,
+        file: 'dist/cjs/index.js',
         format: "cjs",
+        sourcemap: true
       },
       {
-        file: packageJson.module,
+        file: 'dist/esm/index.js',
         format: "esm",
+        sourcemap: true,
       },
     ],
     plugins: [
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript({ tsconfig: "./tsconfig.json", sourcemap: false }),
     ],
   },
   {
