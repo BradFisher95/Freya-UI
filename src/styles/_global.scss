@@ -1,3 +1,16 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    position: relative;
+}
+
 body {
-    background: red;
+    height: 100%;
+    background-color: var(--bg-color);
+    color: var(--font-color);
 }
