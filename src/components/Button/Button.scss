@@ -1,16 +1,32 @@
-.simple-form-group {
-    margin-bottom: 1rem;
+.btn {
+    padding: 0.6rem 1rem;
+    background: transparent;
+    border: 1px solid #1e1e1e;
+    cursor: pointer;
 }
 
-.simple-text-label {
-    display: block;
-    color: red;
+/* styling for our variants */
+.btn-primary {
+    border: none;
+    background-color: blue;
+    color: white;
+
+    &:hover {
+        background-color: blue;
+    }
 }
 
-.simple-text-input {
-    display: inline-block;
-    margin-bottom: 0.5rem;
-    font-size: 16px;
-    font-weight: 400;
-    color: rgb(33, 37, 41);
+.btn-danger {
+    border: none;
+    background-color: red;
+    color: white;
+
+    &:hover {
+        background-color: red;
+    }
+}
+
+/* styling for different shape*/
+.btn-rounded {
+    border-radius: 0.4rem;
 }
