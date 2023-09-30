@@ -9,6 +9,7 @@ import dts from "rollup-plugin-dts";
 // using Native ES modules in Node.js
 // https://rollupjs.org/command-line-interface/#importing-package-json
 import { createRequire } from 'node:module';
+import copy from "rollup-plugin-copy";
 const requireFile = createRequire(import.meta.url);
 const packageJson = requireFile('./package.json');
 
@@ -34,6 +35,12 @@ export default [{
         typescript(),
         postcss({
             extensions: ['.css']
+        }),
+        copy({
+            targets: [
+                { src: 'src/freya-ui.scss', dest: 'lib' },
+                { src: 'src/styles/**/*', dest: 'lib/styles' },
+            ]
         })
     ]
 }, {
