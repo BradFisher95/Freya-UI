@@ -1,21 +1,54 @@
-import React from "react";
+import React from 'react';
+import classNames from 'classnames';
+import './button.css';
 
-export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
-  variant: "primary" | "danger"; 
-  shape?: "rounded";
+export interface ButtonProps {
+  /**
+   * Is this the principal call to action on the page?
+   */
+  type?: 'primary' | 'secondary';
+  /**
+   * What background color to use
+   */
+  textColor?: string;
+  /**
+   * How large should the button be?
+   */
+  size?: 'small' | 'medium' | 'large';
+  /**
+   * Button contents
+   */
+  label: string;
+  /**
+   * Optional click handler
+   */
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
-export const Button: React.FC<ButtonProps> = ({
-  children,
-  variant,
-  shape,
-  ...props
-}) => {
-  const classNames = `btn btn-${variant} btn-${shape}`;
+/**
+ * Primary UI component for user interaction
+ */
+const Button = ({
+  type = 'primary',
+  textColor,
+  size = 'medium',
+  onClick,
+  label
+}: ButtonProps) => {
   return (
-    <button className={classNames} {...props}>
-      {children}
+    <button
+      type="button"
+      className={classNames(
+        'storybook-button',
+        `storybook-button--${size}`,
+        `storybook-button--${type}`
+      )}
+      style={textColor ? { color: textColor } : {}}
+      onClick={onClick}
+    >
+      {label}
     </button>
   );
 };
+
+export default Button;
