@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/react';
+import '../src/freya-ui.scss';
 
 const preview: Preview = {
   parameters: {
