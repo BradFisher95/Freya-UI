@@ -1,10 +1,15 @@
 {
   "name": "freya-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A react component library",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "author": "Bradley Fisher bradleyfisher95dev@gmail.com",
+  "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
@@ -12,12 +17,10 @@
     "build": "rollup -c"
   },
   "keywords": [
-    "stroybook",
+    "storybook",
     "react",
     "typescript"
   ],
-  "author": "Bradley Fisher",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.23.0",
     "@babel/preset-env": "^7.22.20",
