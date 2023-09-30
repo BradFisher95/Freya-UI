@@ -1,6 +1,6 @@
 {
   "name": "freya-ui",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A react component library",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -46,6 +46,7 @@
     "rollup-plugin-dts": "^6.0.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-sass": "^1.12.20",
     "storybook": "^7.4.5",
     "typescript": "^5.2.2"
   },

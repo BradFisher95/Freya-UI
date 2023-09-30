@@ -33,9 +33,7 @@ export default [{
         resolve(),
         commonjs(),
         typescript(),
-        postcss({
-            extensions: ['.css']
-        }),
+        postcss(),
         copy({
             targets: [
                 { src: 'src/freya-ui.scss', dest: 'lib' },
@@ -47,5 +45,5 @@ export default [{
     input: 'lib/index.d.ts',
     output: [{ file: 'lib/index.d.ts', format: 'es' }],
     plugins: [dts()],
-    external: [/\.css$/u]
+    external: [/\.s?css$/u]
 }];
