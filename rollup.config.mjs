@@ -40,5 +40,5 @@ export default [{
     input: 'lib/index.d.ts',
     output: [{ file: 'lib/index.d.ts', format: 'es' }],
     plugins: [dts()],
-    external: [/\.css$/]
+    external: [/\.css$/u]
 }];
