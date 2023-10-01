@@ -1,16 +1,16 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    height: 100%;
-    position: relative;
+  height: 100%;
+  position: relative;
 }
 
 body {
-    height: 100%;
-    background-color: var(--bg-color);
-    color: var(--font-color);
+  height: 100%;
+  background-color: var(--freya-ui-bg-color);
+  color: var(--freya-ui-font-color);
 }
