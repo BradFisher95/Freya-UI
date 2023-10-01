@@ -1,6 +1,7 @@
 .text-input {
   display: flex;
   flex-flow: column;
+
   label {
     margin-bottom: 1rem;
     color: var(--freya-ui-text-input-label-color);
@@ -28,6 +29,19 @@
 
     &::placeholder {
       color: var(--freya-ui-text-input-placeholder-color);
+    }
+  }
+
+  .icon {
+    position: absolute;
+    right: 35px;
+    top: 68px;
+    color: var(--freya-ui-text-input-icon-color);
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: var(--freya-ui-text-input-icon-active-color);
     }
   }
 }

@@ -14,6 +14,7 @@ type Story = StoryObj<typeof TextInput>;
 export const Primary: Story = {
   args: {
     label: 'Email Address',
-    placeholder: 'Enter your email'
+    placeholder: 'Enter your email',
+    showIcon: true
   }
 };
