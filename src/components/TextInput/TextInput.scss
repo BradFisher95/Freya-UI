@@ -1,0 +1,33 @@
+.text-input {
+  display: flex;
+  flex-flow: column;
+  label {
+    margin-bottom: 1rem;
+    color: var(--freya-ui-text-input-label-color);
+    font-weight: 200;
+  }
+
+  input {
+    background-color: var(--freya-ui-text-input-background);
+    color: var(--freya-ui-text-input-text-color);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-weight: 200;
+    font-family: var(--freya-ui-font-family);
+    font-size: var(--freya-ui-font-size);
+    line-height: 1.5em;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      border: 1px solid var(--freya-ui-text-input-border-hover);
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--freya-ui-text-input-placeholder-color);
+    }
+  }
+}

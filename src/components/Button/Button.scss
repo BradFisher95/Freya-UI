@@ -7,9 +7,15 @@
   font-family: var(--freya-ui-font-family);
   font-size: var(--freya-ui-font-size);
   line-height: 1.5em;
+  caret-color: transparent;
+  cursor: pointer;
+  transition: 0.3s;
 
   &.primary {
     background: var(--freya-ui-button-background);
     color: var(--freya-ui-button-text-color);
+    &:hover {
+      background: #7c8df3;
+    }
   }
 }
