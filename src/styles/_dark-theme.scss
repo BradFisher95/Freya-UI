@@ -1,7 +1,9 @@
+@import './breakpoints';
+
 :root {
   // Fonts
   --freya-ui-font-family: 'Outfit', sans-serif;
-  --freya-hub-font-size: 16px;
+  --freya-ui-font-size: 14px;
   // Colors
   --freya-ui-bg-color: #393a4c;
   --freya-ui-panel-color: #2b2c3b;
@@ -22,4 +24,16 @@
   // Icon
   --freya-ui-text-input-icon-color: #767676;
   --freya-ui-text-input-icon-active-color: #6a7ce9;
+}
+
+@include breakpoint($mLandscape) {
+  :root {
+    --freya-ui-font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --freya-ui-font-size: 14px;
+  }
 }
