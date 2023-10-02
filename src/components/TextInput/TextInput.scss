@@ -1,6 +1,7 @@
 .text-input {
   display: flex;
   flex-flow: column;
+  position: relative;
 
   label {
     margin-bottom: 1rem;
@@ -35,7 +36,7 @@
   .icon {
     position: absolute;
     right: 35px;
-    top: 68px;
+    top: 53px;
     color: var(--freya-ui-text-input-icon-color);
     cursor: pointer;
     transition: 0.3s;
