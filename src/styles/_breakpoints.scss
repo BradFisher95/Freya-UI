@@ -1,0 +1,29 @@
+$mPortrait: '(min-width: 320px)';
+$mLandscape: '(min-width: 568px)';
+$tPortrait: '(min-width: 768px)';
+$tLandscape: '(min-width: 1024px)';
+$desktop: '(min-width: 1200px)';
+
+@mixin breakpoint($point) {
+  @if $point ==$mPortrait {
+    @media #{$mPortrait} {
+      @content;
+    }
+  } @else if $point ==$mLandscape {
+    @media #{$mLandscape} {
+      @content;
+    }
+  } @else if $point ==$tPortrait {
+    @media #{$tPortrait} {
+      @content;
+    }
+  } @else if $point ==$tLandscape {
+    @media #{$tLandscape} {
+      @content;
+    }
+  } @else if $point ==$desktop {
+    @media #{$desktop} {
+      @content;
+    }
+  }
+}
