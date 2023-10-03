@@ -3,27 +3,25 @@ import './Checkbox.scss';
 
 export interface CheckboxProps {
   label: string;
-  placeholder: string;
-  showIcon: boolean;
-  inputVisible: boolean;
+  onClick?: () => void;
 }
 
-const Checkbox = ({
-  label = 'label',
-  placeholder = 'placeholder',
-  showIcon = false,
-  inputVisible = true
-}: CheckboxProps) => {
+const Checkbox = ({ label = 'label', onClick }: CheckboxProps) => {
   return (
     <div className="checkbox-wrapper">
-      <input className="inp-cbx" id="morning" type="checkbox" />
+      <input
+        className="inp-cbx"
+        id="morning"
+        type="checkbox"
+        onClick={onClick}
+      />
       <label className="cbx" htmlFor="morning">
         <span>
           <svg width="12px" height="10px">
             <use xlinkHref="#check"></use>
           </svg>
         </span>
-        <span>Keep me signed in</span>
+        <span>{label}</span>
       </label>
       <svg className="inline-svg">
         <symbol id="check" viewBox="0 0 12 10">

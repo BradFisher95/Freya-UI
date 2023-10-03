@@ -1,6 +1,9 @@
 .checkbox-wrapper * {
   box-sizing: border-box;
 }
+.checkbox-wrapper {
+  margin-bottom: 30px;
+}
 .checkbox-wrapper .cbx {
   -webkit-user-select: none;
   user-select: none;
