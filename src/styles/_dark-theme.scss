@@ -24,6 +24,11 @@
   // Icon
   --freya-ui-text-input-icon-color: #767676;
   --freya-ui-text-input-icon-active-color: #6a7ce9;
+
+  // Checkbox
+  --freya-ui-checkbox-background-color: #2b2c3b;
+  --freya-ui-checkbox-border-color: #3f4054;
+  --freya-ui-checkbox-tick-color: #0fcf90;
 }
 
 @include breakpoint($mLandscape) {

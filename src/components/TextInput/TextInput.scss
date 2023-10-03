@@ -1,3 +1,4 @@
+@import '../../styles/breakpoints';
 .text-input {
   display: flex;
   flex-flow: column;
@@ -37,10 +38,14 @@
   .icon {
     position: absolute;
     right: 20px;
-    top: 50px;
+    top: 48px;
     color: var(--freya-ui-text-input-icon-color);
     cursor: pointer;
     transition: 0.3s;
+    @include breakpoint($mLandscape) {
+      right: 20px;
+      top: 50px;
+    }
 
     &:hover {
       color: var(--freya-ui-text-input-icon-active-color);
