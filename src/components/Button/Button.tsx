@@ -12,9 +12,7 @@ const Button = ({
   type = 'button',
   label = 'Button',
   buttonStyle = 'primary',
-  onClick = () => {
-    console.log('Please pass in a click event handler');
-  }
+  onClick
 }: ButtonProps) => {
   return (
     <button type={type} className={`button ${buttonStyle}`} onClick={onClick}>

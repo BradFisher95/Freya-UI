@@ -3,13 +3,18 @@ import './TextInput.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { FieldValues, UseFormRegister } from 'react-hook-form';
 
 export interface TextInputProps {
   label: string;
   placeholder: string;
   showIcon?: boolean;
   inputVisible?: boolean;
-  onInputChange?: ChangeEventHandler<HTMLInputElement>;
+  formRegister: {
+    register: UseFormRegister<FieldValues>;
+    controlName: string;
+    validation: {};
+  };
 }
 
 const TextInput = ({
@@ -17,14 +22,18 @@ const TextInput = ({
   placeholder = 'placeholder',
   showIcon = false,
   inputVisible = true,
-  onInputChange = (e) => {
-    console.log(e?.target.value, '- Please pass inputChangeHandler');
-  }
+  formRegister
 }: TextInputProps) => {
   return (
     <div className="text-input">
       <label>{label}</label>
-      <input placeholder={placeholder} onChange={onInputChange} />
+      <input
+        placeholder={placeholder}
+        {...formRegister.register(
+          formRegister.controlName,
+          formRegister.validation
+        )}
+      />
       {showIcon ? (
         inputVisible ? (
           <FontAwesomeIcon icon={faEye} className="icon" />
