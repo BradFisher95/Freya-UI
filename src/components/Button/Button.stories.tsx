@@ -16,14 +16,14 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
   args: {
     label: 'Primary',
-    type: 'primary'
+    type: 'button'
   }
 };
 
 export const Secondary: Story = {
   args: {
     ...Primary.args,
-    type: 'secondary',
+    type: 'button',
     label: 'Secondary'
   }
 };
