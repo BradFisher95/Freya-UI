@@ -7,9 +7,9 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 export interface TextInputProps {
   label: string;
   placeholder: string;
-  showIcon: boolean;
-  inputVisible: boolean;
-  onInputChange: ChangeEventHandler<HTMLInputElement>;
+  showIcon?: boolean;
+  inputVisible?: boolean;
+  onInputChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
 const TextInput = ({
